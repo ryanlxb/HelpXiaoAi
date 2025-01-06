@@ -19,7 +19,23 @@
  2、国外openai 无法充值
    -- https://dash.302.ai ，注册送 1$ 按量付费。
    
- 3、
+ 3、我想白嫖API，质量其次
+   -- 3.1 gemini
+ ```
+ google gemini 目前是免费调用的，如果白嫖党想用 MIGPT 通过openai API（格式）访问可以：
+1、https://aistudio.google.com/app/apikey   注册一个API token；
+2、注册 CloudFlare，白嫖worker资源。
+3、准备一个自己的域名，托管到 CloudFlare DNS上（实现从国内访问，不走proxy）。
+4、https://github.com/PublicAffairs/openai-gemini?tab=readme-ov-file （实现将gemini 接口转成 openai API 供 MIGPT调用）。---- 有guide 可以一步步完成 在CloudFlare worker部署。
+5、在CloudFlare中，给worker 加一个 自己的域名（就可以实现 国内调用国外gemini接口了）
+6、修改 MIGPT  .env 文件，将地址改成 自己域名、token 使用 google gemini token（第一步）、模型 自己list 查看哪个好用）
+
+我家小米音响试了，还不错。国内访问 gemini 代理 大概 1.2s 以内的样子。
+```
+  -- 3.2 deepseek v3 ，国内类 openai api接口，可以适配，赠送credit
+
+
+有需要的小伙伴参考，不差钱 不太看重质量的 可以参考哈
 
 
 
